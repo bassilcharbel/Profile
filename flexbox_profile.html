@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mid {
+            text-align: center;
+        }
+
+        .profile-container {
+            display: flex;
+            /* Properties for larger screens - will be overridden by media query for smaller screens */
+            flex-direction: row;
+            justify-content: space-around; /* Distribute space around items */
+        }
+
+        .profile-section {
+            border: 1px solid black; /* Similar to original MyBorder */
+            padding: 10px; /* Add some padding */
+            margin: 5px; /* Add some margin between sections */
+            flex-basis: 30%; /* Distribute space somewhat evenly, leaving room for margins/padding */
+            /* min-width: 150px; /* Ensure sections don't get too small */
+        }
+
+        .profile-section h2 {
+            text-align: center; /* Center section titles */
+            margin-top: 0; /* Remove default top margin from h2 */
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            .profile-container {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center items when stacked */
+            }
+
+            .profile-section {
+                flex-basis: auto; /* Allow sections to take full width available in column */
+                width: 90%; /* Or a specific width like 90% */
+                margin-bottom: 10px; /* Add bottom margin when stacked */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="mid">
+        My profile
+    </h1>
+    <div class="profile-container">
+        <div class="profile-section">
+            <h2>education</h2>
+            <p><!-- Content for education --></p>
+        </div>
+        <div class="profile-section">
+            <h2>hobies</h2>
+            <p><!-- Content for hobies --></p>
+        </div>
+        <div class="profile-section">
+            <h2>futur plans</h2>
+            <p><!-- Content for futur plans --></p>
+        </div>
+    </div>
+</body>
+</html>
